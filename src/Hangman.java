@@ -10,13 +10,16 @@ public abstract class Hangman {
 	//gets the player's letter guess and returns it. Should validate that they entered a single letter.
 	public abstract void getGuess();
 	
-	//
-	public abstract void checkGuess();
+	//Checks if the letter guess is in the target word. Returns True if it is, False if it isn't.
+	public abstract boolean checkGuess(char letter);
 	
 	//updates the board display with the new guess by replacing blanks with correctly guessed letters. Returns an updated board string.
-	public abstract void updateBoard();
+	public abstract void updateBoard(char letter);
 	
+	//
+	public abstract boolean checkLose();
 	
-	public abstract void checkWin();
+	public abstract void gameLoop();
+
 	
 }
